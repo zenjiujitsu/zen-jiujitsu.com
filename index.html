@@ -244,7 +244,7 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
 @media(max-width:980px){
   .nav-links{display:none}.hamburger{display:block}
   .hero-inner,.two-col,.two-col-wide{grid-template-columns:1fr;gap:36px}
-  .hero-img-wrap{display:none}
+  .hero-img-wrap{display:block;max-width:360px;margin:0 auto}
   .grid3{grid-template-columns:1fr}
   .youth-values,.benefits-grid{grid-template-columns:1fr}
   .bath-benefits{grid-template-columns:1fr 1fr}
@@ -259,12 +259,15 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
   .two-col{grid-template-columns:1fr}
   .bath-intro{grid-template-columns:1fr!important;justify-items:center}
   .bath-intro .fade-right{width:200px!important}
+  .hero-tag{display:none}
 }
 @media(max-width:640px){
   .bath-benefits,.benefits-grid{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr}
   .cls{flex:0 0 100%}
   .hero-stats{flex-wrap:wrap;gap:20px}
+  .hero-inner{padding:100px 20px 60px}
+  .hero-img-wrap{max-width:300px}
 }
 </style>
 </head>
