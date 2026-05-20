@@ -347,24 +347,32 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
   <div style="background:var(--ink);border:1px solid rgba(212,175,55,.3);border-radius:16px;max-width:520px;width:100%;position:relative;overflow:hidden;">
     <!-- Gold top bar -->
     <div style="background:var(--gold);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;">
-      <span style="font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);">Limited Time Offer</span>
+      <span style="font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);">Memorial Day · Monday May 26</span>
       <button onclick="closePopup()" style="background:none;border:none;cursor:pointer;font-size:22px;font-weight:300;color:var(--ink);line-height:1;padding:0;">✕</button>
     </div>
     <!-- Content -->
-    <div style="padding:36px 36px 40px;">
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,5vw,42px);color:#fff;letter-spacing:-.02em;line-height:.95;margin-bottom:16px;">Your first class is<br/><span style="color:var(--gold);">on us.</span></h2>
-      <p style="font-size:15px;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.6;">Try a free Jiu-Jitsu class or bathhouse session and your first month is included when you join. No experience needed. No pressure.</p>
-      <form onsubmit="submitPopup(event)" style="display:flex;flex-direction:column;gap:12px;">
-        <input id="popup-name" type="text" placeholder="Your first name" required style="padding:14px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:'Manrope',sans-serif;font-size:14px;outline:none;"/>
-        <input id="popup-email" type="email" placeholder="Your email address" required style="padding:14px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:'Manrope',sans-serif;font-size:14px;outline:none;"/>
-        <button type="submit" style="margin-top:4px;padding:16px;border-radius:999px;background:var(--gold);color:var(--ink);font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;">Claim My Free Class →</button>
-      </form>
-      <p id="popup-success" style="display:none;text-align:center;color:var(--gold);font-size:14px;font-weight:600;margin-top:16px;">Thanks! We'll be in touch shortly.</p>
-      <p style="font-size:11px;color:rgba(255,255,255,.35);text-align:center;margin-top:16px;font-style:italic;">No spam, ever. Unsubscribe anytime.</p>
+    <div style="padding:36px 36px 32px;">
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(26px,5vw,38px);color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:20px;">Holiday Schedule<br/><span style="color:var(--gold);">Update</span></h2>
+      <p style="font-size:15px;color:rgba(255,255,255,.8);margin-bottom:24px;line-height:1.6;">All classes are running as expected with the following changes:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:var(--gold);font-size:16px;flex-shrink:0;">✕</span>
+          <span style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.5;"><b style="color:#fff;">6:00 AM class is cancelled</b></span>
+        </li>
+        <li style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:var(--gold);font-size:16px;flex-shrink:0;">★</span>
+          <span style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.5;"><b style="color:#fff;">9:30 AM</b> will be an <b style="color:#fff;">Open Mat from 9–11am</b></span>
+        </li>
+        <li style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="color:var(--gold);font-size:16px;flex-shrink:0;">♨️</span>
+          <span style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.5;"><b style="color:#fff;">Bathhouse</b> closed 12–3pm as usual</span>
+        </li>
+      </ul>
+      <a href="https://book.zen-jiujitsu.com/book-online" onclick="closePopup()" style="display:block;text-align:center;padding:16px;border-radius:999px;background:var(--gold);color:var(--ink);font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;">Book a Class →</a>
     </div>
     <!-- Close text button -->
     <div style="text-align:center;padding:0 28px 24px;">
-      <button onclick="closePopup()" style="background:none;border:none;cursor:pointer;font-size:12px;color:rgba(255,255,255,.4);font-family:'Manrope',sans-serif;letter-spacing:.06em;text-decoration:underline;">No thanks, I'll pay full price</button>
+      <button onclick="closePopup()" style="background:none;border:none;cursor:pointer;font-size:12px;color:rgba(255,255,255,.4);font-family:'Manrope',sans-serif;letter-spacing:.06em;text-decoration:underline;">Close</button>
     </div>
   </div>
 </div>
