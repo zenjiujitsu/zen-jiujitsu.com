@@ -327,33 +327,38 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
     </div>
     <div class="hero-img-wrap fade-right" style="transition-delay:.2s">
       <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(212,175,55,.2);display:flex;flex-direction:row;gap:0;position:relative;aspect-ratio:9/8;">
-        <!-- BJJ top half -->
+        <!-- BJJ left panel -->
         <div style="flex:1;overflow:hidden;position:relative;">
           <video id="heroVideo" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
             <source src="https://zenjiujitsu.github.io/zen-jiujitsu.com/ZJJ-Video-Ad-001.mp4" type="video/mp4"/>
           </video>
-          <div style="position:absolute;bottom:8px;left:12px;z-index:2;">
+          <div style="position:absolute;top:10px;left:12px;z-index:2;">
             <span style="font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);">Jiu-Jitsu</span>
           </div>
+          <!-- Mute button — left video only -->
+          <button id="muteBtn" onclick="toggleMute()" style="position:absolute;bottom:10px;left:12px;z-index:3;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;backdrop-filter:blur(4px);" title="Toggle sound">
+            <svg id="icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+            </svg>
+            <svg id="icon-unmuted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+          </button>
         </div>
         <!-- Gold divider -->
         <div style="width:3px;background:var(--gold);flex-shrink:0;align-self:stretch;"></div>
-        <!-- Bathhouse bottom half -->
+        <!-- Bathhouse right panel — permanently muted, no button -->
         <div style="flex:1;overflow:hidden;position:relative;">
           <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
             <source src="https://zenjiujitsu.github.io/zen-jiujitsu.com/Bathhouse-V-001.mp4" type="video/mp4"/>
           </video>
-          <div style="position:absolute;bottom:8px;left:12px;z-index:2;">
+          <div style="position:absolute;top:10px;left:12px;z-index:2;">
             <span style="font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);">Outdoor Bathhouse</span>
           </div>
         </div>
-        <!-- Mute button -->
-        <button id="muteBtn" onclick="toggleMute()" style="position:absolute;bottom:16px;right:16px;z-index:3;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);border-radius:999px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;backdrop-filter:blur(4px);">
-          <svg id="muteIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-            <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
-          </svg>
-        </button>
       </div>
       <div class="hero-tag"><span>Free</span>Trial Class</div>
     </div>
@@ -901,6 +906,14 @@ sections.forEach(s=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.
 const revealIO=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up,.fade-left,.fade-right').forEach(el=>revealIO.observe(el));
 document.querySelectorAll('#hero .fade-up,#hero .fade-right').forEach(el=>setTimeout(()=>el.classList.add('in'),100));
+function toggleMute(){
+  var v=document.getElementById('heroVideo');
+  var muted=v.muted;
+  v.muted=!muted;
+  document.getElementById('icon-muted').style.display=muted?'none':'block';
+  document.getElementById('icon-unmuted').style.display=muted?'block':'none';
+  if(muted){v.play()}
+}
 function toggleFaq(btn){const a=btn.nextElementSibling;const isOpen=a.classList.contains('open');btn.closest('.faq-group').querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));btn.closest('.faq-group').querySelectorAll('.faq-q').forEach(x=>x.classList.remove('open'));if(!isOpen){a.classList.add('open');btn.classList.add('open')}}
 </script>
 </body>
