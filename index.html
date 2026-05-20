@@ -257,6 +257,8 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
   .section{padding:70px 20px}
   .schedule-wrap{padding:28px 20px}
   .two-col{grid-template-columns:1fr}
+  .bath-intro{grid-template-columns:1fr!important;justify-items:center}
+  .bath-intro .fade-right{width:200px!important}
 }
 @media(max-width:640px){
   .bath-benefits,.benefits-grid{grid-template-columns:1fr}
@@ -443,12 +445,7 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
       <h2 class="display section-title">Build an<br/>unstoppable kid.</h2>
       <p class="section-body">When a child gets stuck underneath someone and learns to breathe, think, and work their way out, that moment builds something no pep talk can manufacture. Real confidence, earned on the mat, that makes them unstoppable everywhere else.</p>
     </div>
-    <div style="margin-top:50px;border-radius:10px;overflow:hidden;border:1px solid rgba(212,175,55,.2);aspect-ratio:16/7;" class="fade-up">
-      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
-        <source src="https://zenjiujitsu.github.io/zen-jiujitsu.com/Bathhouse-V-001.mp4" type="video/mp4"/>
-      </video>
-    </div>
-    <div class="grid3" style="margin-top:30px;">
+    <div class="grid3" style="margin-top:50px;">
       <div class="age-card fade-up d1">
         <div class="age-card-img"><img src="https://zenjiujitsu.github.io/zen-jiujitsu.com/Youth-G001.webp" alt="Kids martial arts Huntington NY ages 3-4" loading="lazy"/></div>
         <div class="age-card-body">
@@ -507,12 +504,23 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
 <!-- BATHHOUSE -->
 <section id="bathhouse" style="background:var(--ink);color:#fff;">
   <div class="section">
-    <div style="max-width:640px;" class="fade-up">
-      <span class="label eyebrow" style="color:var(--gold-light);">/ 03 · The Zen Outdoor Bathhouse</span>
-      <h2 class="display section-title" style="color:#fff;">Hot. Cold.<br/>Reset.</h2>
-      <p class="section-body" style="color:rgba(255,255,255,.65);">An outdoor contrast therapy space available year-round in Huntington Village. Cold plunge, infrared sauna, and hot tub, proven tools that reduce inflammation, improve sleep, and sharpen everything between your ears.</p>
+    <!-- Bathhouse intro: text + portrait video side by side -->
+    <div class="bath-intro fade-up" style="display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;margin-bottom:60px;">
+      <div>
+        <span class="label eyebrow" style="color:var(--gold-light);">/ 03 · The Zen Outdoor Bathhouse</span>
+        <h2 class="display section-title" style="color:#fff;">Hot. Cold.<br/>Reset.</h2>
+        <p class="section-body" style="color:rgba(255,255,255,.65);">An outdoor contrast therapy space available year-round in Huntington Village. Cold plunge, infrared sauna, and hot tub, proven tools that reduce inflammation, improve sleep, and sharpen everything between your ears.</p>
+      </div>
+      <!-- Portrait video — natural 9:16 ratio, no stretching -->
+      <div style="width:240px;flex-shrink:0;" class="fade-right">
+        <div style="aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(212,175,55,.25);box-shadow:0 24px 60px rgba(0,0,0,.5);">
+          <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="https://zenjiujitsu.github.io/zen-jiujitsu.com/Bathhouse-V-001.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
     </div>
-    <div class="grid3" style="margin-top:50px;">
+    <div class="grid3" style="margin-top:0;">
       <div class="modality-card fade-up d1">
         <div class="modality-img"><img src="https://zenjiujitsu.github.io/zen-jiujitsu.com/Sauna-S.webp" alt="Infrared sauna Huntington NY" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;"/></div>
         <div class="modality-body"><div class="modality-temp">/ Heat · ~170°F</div><h3>Infrared Sauna</h3><p>Infrared heat penetrates deeper than traditional saunas, boosting circulation, recovery, and cardiovascular health at a cellular level.</p></div>
@@ -871,7 +879,7 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:50p
     <div class="contact-grid fade-up">
       <div class="contact-item"><div class="ci-label">Location</div><h4>278 Main Street</h4><p>Huntington, NY 11743<br/>In the heart of Huntington Village</p><a href="https://maps.google.com/?q=278+Main+St+Huntington+NY+11743" style="display:inline-block;margin-top:10px;color:var(--gold);font-size:13px;font-weight:700;">Get Directions →</a></div>
       <div class="contact-item"><div class="ci-label">Contact</div><h4>Reach Out</h4><a href="tel:6318182223">(631) 818-2223</a><br/><a href="mailto:careteam@zen-jiujitsu.com">careteam@zen-jiujitsu.com</a></div>
-      <div class="contact-item"><div class="ci-label">Online</div><h4>Book & Manage</h4><a href="https://book.zen-jiujitsu.com/book-online">Book a class or session</a><br/><a href="https://book.zen-jiujitsu.com/packages">Purchase packages</a><br/><a href="https://book.zen-jiujitsu.com/faq">FAQ</a></div>
+      <div class="contact-item"><div class="ci-label">Online</div><h4>Book & Manage</h4><a href="https://book.zen-jiujitsu.com/book-online">Book a class or session</a><br/><a href="https://book.zen-jiujitsu.com/contact-us">Contact us for details on plans and packages</a><br/><a href="https://book.zen-jiujitsu.com/faq">FAQ</a></div>
     </div>
   </div>
 </section>
