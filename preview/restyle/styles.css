@@ -209,13 +209,20 @@ section,
 }
 
 .hero-copy {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 36px 48px;
-  align-items: start;
-  padding-top: 52px;
-  padding-bottom: 32px;
+  padding-top: 56px;
+  padding-bottom: 36px;
 }
+
+.hero-sub {
+  margin-top: 18px;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.hero-copy .where { margin-top: 14px; }
+
+.hero-copy .actions { margin-top: 22px; }
 
 .hero-photo { margin: 0; }
 
