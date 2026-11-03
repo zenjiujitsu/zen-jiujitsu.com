@@ -1272,6 +1272,7 @@ details p {
   .hero-copy { padding-top: 32px; padding-bottom: 22px; }
 
   .hero-a { min-height: 0; align-items: stretch; }
+  .hero-a-photo img { object-position: center 22%; }
   .hero-a-copy {
     width: calc(100% - 32px);
     margin: 0 auto;
